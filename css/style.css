@@ -5,18 +5,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252A;
+    
 }
 
 body {
-    background-color: white;
+    background-color:white;
 }
 h1 {
     color:black;
     font-size: 400%;
 }
 a {
-    color:black;
+    color:rgb(0, 0, 0);
     font-size: 100%;
 
 }
@@ -27,7 +27,7 @@ li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #edf0f1;
+    color: #94979a;
     text-decoration: none;
 
 }
@@ -43,6 +43,7 @@ header {
 
 .nav_links {
     list-style: none;
+   
 }
 
 .nav__links li:nth-child(1) {
@@ -55,7 +56,11 @@ header {
 .nav__links li {
     display: inline-block;
     padding: 0px 20px;
+   
 }
+
+
+
 
 .nav__links li a {
    transition: all 0.3s ease 0s;
@@ -63,11 +68,12 @@ header {
 }
 
 .nav__links li a :hover {
-   color: #0088a9
+   color: #8f89ea
 }
 button {
+    margin-left:20px ;
     padding: 9px 25px;
-    background-color: rgba(0,136,1);
+    background-color: #261D3A;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -75,16 +81,27 @@ button {
 }
 
 button:hover {
-    background-color: rgba(0,136,169,0.8); 
+    background-color: rgba(212, 80, 245, 0.8); 
 }
 
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-}
+
+
 nav {
  order: 1;
 }
 .cta {
     order: 2;
+    
 }
+.logo {
+    cursor: pointer;
+    order:3;
+    margin-left: auto;
+}
+
+
+head {
+    background-color: #e426b4;
+}
+
+
