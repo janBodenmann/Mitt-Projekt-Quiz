@@ -9,15 +9,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
- body {
+body {
 
- 
+
     background: #252839;
-} 
+}
 
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     position: relative;
     font-size: 14vw;
     color: #252839;
@@ -37,9 +39,10 @@ h1::before {
     -webkit-text-stroke: 0vw white;
     border-right: 2px solid white;
     overflow: hidden;
-    animation: animate 6s linear normal;
+    animation: animate 5s linear normal;
     word-break: keep-all;
 }
+
 h2::before {
     content: attr(data-text_contact);
     position: absolute;
@@ -51,9 +54,10 @@ h2::before {
     -webkit-text-stroke: 0vw white;
     border-right: 2px solid white;
     overflow: hidden;
-    animation: animate 6s linear normal;
+    animation: animate 5s linear normal;
     word-break: keep-all;
 }
+
 h3::before {
     content: attr(data-text_Login);
     position: absolute;
@@ -65,20 +69,21 @@ h3::before {
     -webkit-text-stroke: 0vw white;
     border-right: 2px solid white;
     overflow: hidden;
-    animation: animate 6s linear normal;
+    animation: animate 5s linear normal;
     word-break: keep-all;
 }
 
 
 @keyframes animate {
-    
-    0%,10%,100%
-    {
+
+    0%,
+    10%,
+    100% {
         width: 0;
     }
 
-    70%,90%
-     {
+    70%,
+    90% {
         width: 100%;
     }
 }
@@ -96,7 +101,9 @@ h3::before {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: black;
     font-size: 400%;
 }
@@ -109,8 +116,8 @@ a {
 
 
 
+
 li,
-a,
 button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -119,6 +126,18 @@ button {
     text-decoration: none;
 
 }
+
+a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #Fbf9f8;
+    text-decoration: none;
+
+
+
+}
+
 
 header {
     display: flex;
@@ -177,6 +196,7 @@ button:hover {
 
 nav {
     order: 1;
+    padding-left: 0%;
 }
 
 .cta {
@@ -193,4 +213,35 @@ nav {
 
 head {
     background-color: #e426b4;
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 2%;
+        width: 96%;
+        display: inline-block;
+    }
+
+    nav {
+        margin: 0;
+    }
+}
+
+
+
+img {
+    width: 30%;
+    height: 10%
+
+
+
+
 }
