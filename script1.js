@@ -1,4 +1,4 @@
-// Es fehlt die Prüfung, ob das eingegebene Wort überhaupt existiert. Braucht warscheinlich eine Datenbank (ein Wörterbuch). Zweite Runde?
+// Zweite Runde?
 
 
 // Eine Funktion, die einen zufälligen Buchstaben aus dem Alphabet gibt
@@ -31,6 +31,7 @@ const quiz= document.getElementById('quiz')
 const submitBtn = document.getElementById('submit')
 const message = document.getElementById('message')
 let points = 0
+let gefunden
 loadLetters()
 
 // Funktion um die Variablen zu laden
@@ -44,10 +45,26 @@ submitBtn.addEventListener('click', () => {
     const answer = document.getElementById('answer').value
     if(answer != ""){ // wenn die Antwort nicht leer ist, dann...
 
-        points = points + answer.length
-        message.innerHTML = `
-           <h3>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</h3>
-           <button onclick="location.reload()">Runde 2</button>
-        ` //Wir könnten eine zweite Runde einbauen. Also pro Spiel würde es 2 Runden geben. Die Punktzahl muss noch gespeichert werden
+        fetch("https://raw.githubusercontent.com/davidak/wortliste/master/wortliste.txt")
+        .then(x => x.text())
+        .then(x => {
+            gefunden = x.search(answer)
+            if (gefunden > -1){
+                points = points + answer.length
+                 message.innerHTML = `
+                <h3>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</h3>
+                <button onclick="location.reload()">Runde 2</button>
+                ` //Wir könnten eine zweite Runde einbauen. Also pro Spiel würde es 2 Runden geben. Die Punktzahl muss noch gespeichert werden
+            }
+            else {
+                message.innerHTML = `
+                <h3>Du hast Wort existiert nicht. Du erhälst keine Punkte.</h3>`
+            }
+        }
+            
+        );
+        
+
+        
     }
 })
