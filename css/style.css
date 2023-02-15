@@ -76,14 +76,13 @@ h3::before {
 
 @keyframes animate {
 
-    0%,
-    10%,
-    100% {
+    0%
+    
+     {
         width: 0;
     }
-
-    70%,
-    90% {
+    100%
+     {
         width: 100%;
     }
 }
@@ -140,9 +139,8 @@ a {
 
 
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     padding: 30px 10%;
 
 }
@@ -244,4 +242,18 @@ img {
 
 
 
+}
+
+footer {
+    display: flex; 
+    align-items: center; 
+    padding: 0px 20px;
+    
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: #080808;
+    text-decoration: none;
+    
+    
 }
