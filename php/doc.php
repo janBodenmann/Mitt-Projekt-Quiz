@@ -8,6 +8,6 @@ try {
 
 } catch (PDOExpection $e) {
     echo "SQL Error: " .$e->getMessage();
-
+    
 }
 ?>
