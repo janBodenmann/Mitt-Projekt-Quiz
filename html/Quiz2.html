@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz2</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Zweites Spiel</title>
 </head>
 <body>
+    <p>Löse die untenstehende Zahl</p>
+    <h2 id="goalnumber"></h2>
+    <h2><span id="numbers1"></span>&nbsp;<span id="numbers2"></span></h2>
+    <button-group>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="multiply">*</button>
+        <button id="divide">/</button>
+        <button id="bracket-left">(</button>
+        <button id="bracket-right">)</button>
+    </button-group>
+    <br><br>
+    <label>Dein Rechnung </label>
     
+    <input type="text" id="answer" name="answer" onchange="checkUserInput()"><br><br>
+    <button id="submit">Schicken</button>
+    <p id="message">Klick auf das Button um deine Antwort abzusenden.</p>
+
+
+    <a href="Quiz3.html">Nächstes Spiel</a>
+
+    <script src="script2.js"></script>
 </body>
 </html>
