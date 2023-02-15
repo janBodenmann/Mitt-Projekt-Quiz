@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../php/doc.php">
+</head>
+
 <body>
-   <center> <h3 data-text_login ="Login"> Login</h3> </center>
-   <center> 
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input id="email" type="text" class="form-control" name="email" placeholder="E-Mail">
-    </div>
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input id="password" type="password" class="form-control" name="password" placeholder="Passwort">
-    </div>
-    <div class="input-group">
-      
-        
-    </div>
+  <h1>anmelden</h1>
+  <form action="../html/index.html" method="post" data-ajax="false">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="pw" placeholder="Passwort" required> <br>
+    <button type="submit" name="submit">Einloggen</button>
   </form>
-</center>
+  <br>
+  <a href="../php/register.php">Noch keinen Account?</a>
+
+
+
 </body>
+
 </html>
