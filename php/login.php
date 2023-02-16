@@ -15,7 +15,7 @@
 
 <?php
 if(isset($_POST["submit"])){
-  require("mysql.oho");
+  require("database");
   $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME =:user");; //Username überprüfen
   $stmt->bindParam(":user", $_POST["username"]);
   $stmt->execute();
