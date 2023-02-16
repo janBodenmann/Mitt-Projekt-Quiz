@@ -1,7 +1,7 @@
 
  <?php
  if(isset($_POST["submit"])){
-    require("login_data.php")
+    require("login_data.php");
     $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME =:user");; //Username überprüfen
     $stmt->bindParam(":user", $_POST["username"]);
     $stmt->execute();
