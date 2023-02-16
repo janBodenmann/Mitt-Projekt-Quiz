@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$name = "test";
+$name = "login_data.sql";
 $user = "root";
 $passwort = "";
 try {
