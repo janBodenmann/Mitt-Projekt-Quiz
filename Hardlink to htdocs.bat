@@ -1,0 +1,1 @@
+mklink /J c:\xampp\htdocs\quiz C:\Users\bfo\Documents\GitHub\Mitt-Projekt-Quiz

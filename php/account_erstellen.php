@@ -14,7 +14,7 @@
  <?php
  
     if(isset($_POST["submit"])){
-      require("mysql.php");
+      require("config.php");
       $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
       $stmt->bindParam(":user", $_POST["username"]);
       $stmt->execute();
@@ -39,7 +39,7 @@
      ?>
 
 <h1> Account erstellen </h1>
-    <form action="register.php" method="post">
+    <form method="post">
         <input type="text" name="username" placeholder="Username" required><br>
         <input type="password" name="pw" placeholder="Passwort" required><br>
         <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>

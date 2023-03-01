@@ -1,6 +1,8 @@
 
 <?php
+echo "login.php wird ausgeführt";
 if(isset($_POST["submit"])){
+
   require("database");
   $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME =:user");; //Username überprüfen
   $stmt->bindParam(":user", $_POST["username"]);
@@ -12,7 +14,7 @@ if(isset($_POST["submit"])){
     if(password_verify($_POST["pw"], $row["PASSWORD"])){
       session_start();
       $_SESSION["username"] = $row["USERNAME"];
-      header ("Location: gehem.php");
+      header ("Location: geheim.php");
     } else {
       echo "string";
     }
