@@ -78,12 +78,8 @@ if(!isset($_SESSION["username"])){
 
 
 
-       <footer>
-            <h6>Impressum</h6>
-             
-            <h6> Datenschutz</h6>
-        </footer>
-
+       <h6>  <a href="Datenschutz.html">Datenschutz </a>  </h6>
+       <h6>   <a  href="Impressum.html">Impressum </a> </h6>
     </div>
 
 

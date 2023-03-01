@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account erstellen</title>
-    
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
+<center>
 <body>
  <?php
  
@@ -38,7 +38,7 @@
     }
      ?>
 
-<h1> Account erstellen </h1>
+<h122> Account erstellen </h122>
     <form method="post">
         <input type="text" name="username" placeholder="Username" required><br>
         <input type="password" name="pw" placeholder="Passwort" required><br>
@@ -47,8 +47,7 @@
     </form>
     <br>
     <a href="../php/login.php">Hast du bereits einen Account</a>
-    
+   
 
 </body>
-
-</html>
+</center>
