@@ -12,7 +12,7 @@ if(!isset($_SESSION["username"])){
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head  >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@ if(!isset($_SESSION["username"])){
 
     <script src="../script1.js"></script>
 
-    <center>
+    <center id="headermain">
         <h1 data-text="Quiz"> Quiz</h1>
     </center>
     <style>
@@ -40,7 +40,7 @@ if(!isset($_SESSION["username"])){
     </style>
 
 </head>
-<header>
+<header id="headermain">
     <nav>
         <ul class="nav__links">
 
@@ -56,7 +56,7 @@ if(!isset($_SESSION["username"])){
 
         </ul>
     </nav>
-    <a class="cta" href="contact.html"><button> Contact </button></a>
+    <a class="cta" href="contact.php"><button> Contact </button></a>
     <a class="cta" href="../php/login.php"><button> Login </button></a>
 
 </header>
@@ -65,23 +65,22 @@ if(!isset($_SESSION["username"])){
 
     <div class="container-fluid bg-1 text-center">
 
-        <center><img src="../Images/Hirn.png" alt="">
-        </center>
+        <center> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     <div class="container-fluid bg-2 text-center">
-        <br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     </div>
 
-    <div class="container-fluid bg-3 text-center">
-        <br><br><br>
+    <div class="container-fluid bg-3 text-center">     <a href="Datenschutz.html">Datenschutz | <a href="Impressum.html">Impressum </a>  
+        <br><br><br><br><br><br><br>
 
 
-
-      
+       
+        
     </div>
 
-    <h6>  <a href="Datenschutz.html">Datenschutz | <a href="Impressum.html">Impressum </a>  </h6>
+   
      
 
 

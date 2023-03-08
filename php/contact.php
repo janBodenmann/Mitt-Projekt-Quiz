@@ -17,7 +17,15 @@
   
  
  
-  
+  <?php
+
+if (isset($_POST["submit"])){
+mail ("jan.bodenmann@lernende.bfo-vs.ch", "Kontaktformular", 'Name: '.$_POST["name"].'Email: '.$_POST["email"])
+
+?>
+<?php
+}
+?>
  
   
   <div class="shade">
@@ -25,27 +33,26 @@
       <div class="form">
         <p id = "contact">
           <label>Name: </label>
-          <input type="text" />
+          <input type="name" required />
         </p>
         <p id = "contact">
           <label>E-Mail: </label>
-          <input type="text" />
+          <input type="email" required />
         </p>
-        <p id = "contact">
-          <label>Iphone-nummer: </label>
-          <input type="tel" />
-        </p>
+    
         <p id = "contact">
           <label>Beschreibung: </label>
           <input type="text" />
         </p>
         <p id = "contact">
           <label>Kommentar: </label>
-          <textarea></textarea>
+          <textarea name ="Kommentar" rows="10" cols="40" required></textarea>
         </p>
         <p class="auswippen">
           <input type="submit" value="Senden" />
-        </p>
+          
+   
+          </p>
       </div>
     </div>
   </div>
