@@ -33,25 +33,54 @@ mail ("jan.bodenmann@lernende.bfo-vs.ch", "Kontaktformular", 'Name: '.$_POST["na
       <div class="form">
         <p id = "contact">
           
-        <form action="index.php" method="post">
-      <input type="text" name="name" placeholder="Name" required><br>
-      <input type="email" name="email" placeholder="Email" required><br>
-      <select name="priorität">
-        <option value="hoch">Hoch</option>
-        <option value="mittel">Mittel</option>
-        <option value="gering">Gering</option>
-      </select><br>
+        <form action="contact.php" method="post">
+      <input type="text" name="name" placeholder="Beschreibung:" required><br>
+      <br>
+      Namen eingeben: <input type="text" name="einName" size="30" maxlength="40">     
       <textarea name="message" rows="8" cols="80" required></textarea><br>
       <button type="submit" name="submit">Absenden</button>
-    </form>
-  </body>
-</html>
-   
-          </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      </form>
+    </p>
       </div>
     </div>
   </div>
 
+  
+  
+  </body>
+</html>
+   
+      
 
 
 
