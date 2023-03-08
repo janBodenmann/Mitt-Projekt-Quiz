@@ -78,11 +78,11 @@ if(!isset($_SESSION["username"])){
 
 
 
-       <h6>  <a href="Datenschutz.html">Datenschutz </a>  </h6>
-       <h6>   <a  href="Impressum.html">Impressum </a> </h6>
+      
     </div>
 
-
+    <h6>  <a href="Datenschutz.html">Datenschutz | <a href="Impressum.html">Impressum </a>  </h6>
+     
 
 
 

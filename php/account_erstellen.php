@@ -28,17 +28,17 @@
           $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
           $stmt->bindParam(":pw", $hash);
           $stmt->execute();
-          echo "Dein Account wurde angelegt";
+          echo "Dein Account wurde angelegt!";
         } else {
-          echo "Die Passwörter stimmen nicht überein";
+          echo "Die Passwörter stimmen nicht überein!";
         }
       } else {
-        echo "Der Username ist bereits vergeben";
+        echo "Der Username ist bereits vergeben!";
       }
     }
      ?>
 
-<h122> Account erstellen </h122>
+<p> Account erstellen <p>
     <form method="post">
         <input type="text" name="username" placeholder="Username" required><br>
         <input type="password" name="pw" placeholder="Passwort" required><br>

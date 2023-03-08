@@ -12,7 +12,7 @@
 body {
 
 
-    background: #252839;
+    /* background: #252839; */
 }
 
 
@@ -76,13 +76,11 @@ h3::before {
 
 @keyframes animate {
 
-    0%
-    
-     {
+    0% {
         width: 0;
     }
-    100%
-     {
+
+    100% {
         width: 100%;
     }
 }
@@ -130,7 +128,7 @@ a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color:#8f89ea;
+    color: #000000;
     text-decoration: none;
 
 
@@ -139,8 +137,8 @@ a {
 
 
 header {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     padding: 30px 10%;
 
 }
@@ -238,24 +236,57 @@ head {
 img {
     width: 30%;
     height: 10%
-
-
-
-
 }
 
 footer {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     padding: 0px 20px;
-    
+
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 21px;
     color: #080808;
     text-decoration: none;
-    
-    
+
+
+}
+
+p {
+    font-size: 400%;
 }
 
 
+#p1 {
+    font-size: 200%;
+}
+
+#message {
+    font-size: 200%;
+}
+
+
+
+#error {
+
+    font-size: 250%;
+    color: aliceblue;
+
+
+}
+
+/* LOGIN */
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
