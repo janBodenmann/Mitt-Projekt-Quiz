@@ -96,3 +96,4 @@ mail ("jan.bodenmann@lernende.bfo-vs.ch", "Kontaktformular", 'Name: '.$_POST["na
     </form>
   </body>
 </html>
+
