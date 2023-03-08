@@ -11,8 +11,8 @@
 
 body {
 
-
-    /* background: #252839; */
+    background: url(../Images/moon.jpg);
+    /* background: #9fa3bd; */
 }
 
 
@@ -289,4 +289,48 @@ p {
     margin: auto;
     margin-top: 50px;
     background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+    color: white;
+
+
+
+
+}
+
+
+
+
+/* LOGIN BOX */
+
+.box {
+    padding: 12px;
+    margin: 20px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+
+
+}
+#submit {
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 50%;
+    background-color:  rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+
+
+
+}
+
+#contact {
+    font-size: small;
 }

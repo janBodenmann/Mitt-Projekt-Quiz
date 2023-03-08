@@ -38,12 +38,12 @@
     }
      ?>
 
-<p> Account erstellen <p>
-    <form method="post">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="pw" placeholder="Passwort" required><br>
-        <input type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
-        <button type="submit" name="submit"> Erstellen</button>
+<p id ="error"> Account erstellen <p>
+    <form method="post" class ="form">  
+        <input  class ="box" type="text" name="username" placeholder="Username" required ><br>
+        <input class ="box" type="password" name="pw" placeholder="Passwort" required><br>
+        <input  class ="box"type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
+        <button class ="box"  type="submit" name="submit"> Erstellen</button>
     </form>
     <br>
     <a href="../php/login.php">Hast du bereits einen Account</a>

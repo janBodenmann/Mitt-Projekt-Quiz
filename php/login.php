@@ -43,13 +43,13 @@ if(isset($_POST["submit"])){
 <center>
 <p id = "error"> anmelden</p>
     <form action="login.php" method="post" data-ajax="false" class="form">
-      <input type="text" name="username" placeholder="Username" required><br>
-      <input type="password" name="pw" placeholder="Passwort" required> <br>
-      <button type="submit" name="submit">Einloggen</button>
+      <input class = "box" type="text" name="username" placeholder="Username" required><br>
+      <input class = "box" type="password" name="pw" placeholder="Passwort" required> <br>
+      <button class = "box" name="submit">Einloggen</button>
     </form>
     <br>
     <a href="account_erstellen.php">Noch keinen Account?</a>
-    <?php if($unsuccessful) echo $text; ?>
+    <!-- <?php if($unsuccessful) echo $text; ?> -->
     </body>
     </html>
     </center>
