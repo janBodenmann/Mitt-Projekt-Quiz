@@ -2,9 +2,6 @@
 // take random number from array then random (plus, minus or multiply) another random number from array. repeat 3 or so times
 // and you get the goal number
 
-// Funktion checkUserInput() noch nicht fertig.
-
-
 // Eine Funktion, die eine zufälligen Nummer gibt
 function generateRandomNumber() {
     const numbers = "0123456789" 
@@ -58,7 +55,7 @@ const numbers2 = document.getElementById('numbers2')
 const submitBtn = document.getElementById('submit')
 const message = document.getElementById('message')
 
-let localPoints = 0
+let points = 0
 
 loadNumbers()
 checkUserInput()
@@ -93,36 +90,39 @@ function checkUserInput() {
         let y = answer - goalNum
 
         if(answer == goalNum){
-            localPoints += 30
-            localStorage.setItem('Two', localPoints)
-            console.log(localStorage)
+            points += 30
+            // localStorage.setItem('Round3', points)
             difference = "Du hast die Zahl getroffen!"
         }
         else if(x == 1 || y == 1) {
-            localPoints += 20
-            localStorage.setItem('Two', localPoints)
-            console.log(localStorage)
+            points += 20
+            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 1."
         }
         else if(2 <= x && x <= 5 || 2 <= y && y <= 5 ) {
-            localPoints += 10
-            localStorage.setItem('Two', localPoints)
-            console.log(localStorage)
+            points += 10
+            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 5."
         }
         else if(6 <= x && x <= 10 || 6 <= y && y <= 10 ) {
-            localPoints += 5
-            localStorage.setItem('Two', localPoints)
-            console.log(localStorage)
+            points += 5
+            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 10."
         }
         else {
             difference = "Die Differenz ist grösser als 10."
         }
 
+        if(localStorage.getItem('roundThree')){
+            localStorage.setItem('roundFour', points)
+        }
+        else {
+            localStorage.setItem('roundThree', points)
+        }
+
         if(answer){
             message.innerHTML = `
-            <p>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${localPoints} Punkte erhalten.</p>
+            <p>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${points} Punkte erhalten.</p>
             <button onclick="location.reload()">Runde 2</button>
             `
         }
