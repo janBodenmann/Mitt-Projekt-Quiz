@@ -94,18 +94,26 @@ function checkUserInput() {
 
         if(answer == goalNum){
             localPoints += 30
+            localStorage.setItem('Two', localPoints)
+            console.log(localStorage)
             difference = "Du hast die Zahl getroffen!"
         }
         else if(x == 1 || y == 1) {
             localPoints += 20
+            localStorage.setItem('Two', localPoints)
+            console.log(localStorage)
             difference = "Du hast eine Differenz von 1."
         }
         else if(2 <= x && x <= 5 || 2 <= y && y <= 5 ) {
             localPoints += 10
+            localStorage.setItem('Two', localPoints)
+            console.log(localStorage)
             difference = "Du hast eine Differenz von 5."
         }
         else if(6 <= x && x <= 10 || 6 <= y && y <= 10 ) {
             localPoints += 5
+            localStorage.setItem('Two', localPoints)
+            console.log(localStorage)
             difference = "Du hast eine Differenz von 10."
         }
         else {
@@ -114,7 +122,7 @@ function checkUserInput() {
 
         if(answer){
             message.innerHTML = `
-            <h3>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${localPoints} Punkte erhalten.</h3>
+            <p>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${localPoints} Punkte erhalten.</p>
             <button onclick="location.reload()">Runde 2</button>
             `
         }
@@ -123,7 +131,7 @@ function checkUserInput() {
    }
    else if(counter != 0) {
     message.innerHTML = `
-    <h3>Du hast nicht alle Zahlen verwendet. Versuche es wieder.</h3>
+    <p>Du hast nicht alle Zahlen verwendet. Versuche es wieder.</p>
     `
     }
  

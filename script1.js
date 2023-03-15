@@ -51,14 +51,18 @@ submitBtn.addEventListener('click', () => {
             gefunden = x.search(answer)
             if (gefunden > -1){
                 points = points + answer.length
-                 message.innerHTML = `
-                <h3>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</h3>
+
+                localStorage.setItem('One', points)
+                console.log(localStorage)
+
+                message.innerHTML = `
+                <p>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</p>
                 <button onclick="location.reload()">Runde 2</button>
                 ` //Wir könnten eine zweite Runde einbauen. Also pro Spiel würde es 2 Runden geben. Die Punktzahl muss noch gespeichert werden
             }
             else {
                 message.innerHTML = `
-                <h3>Du hast Wort existiert nicht. Du erhälst keine Punkte.</h3>`
+                <p>Das Wort existiert nicht. Du erhälst keine Punkte.</p>`
             }
         }
             
