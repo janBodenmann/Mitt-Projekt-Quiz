@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Zweites Spiel</title>
-    <script src="script2.js"></script> 
+
 </head>
 <body>
    
@@ -14,59 +14,55 @@
     <center> <div class="container-fluid bg-1 text-center"><br><br><br><br><br><br> <p id="p1">Löse die untenstehende Zahl:</p> 
        
     
-    <h22 id="goalnumber"></h22>
-    <h22><span id="numbers1"></span>&nbsp;<span id="numbers2"></span></h22>
-    <style>
-        .bg-1 {
-            background-color: #8F89E5;
-        }
+        <p id="goalnumber"></p>
+        <br>
+        <p><span id="numbers1"></span>&nbsp;<span id="numbers2"></span></p>
+        <br>
+        <style>
+            .bg-1 {
+                background-color: #8F89E5;
+            }
 
-        .bg-2 {
-            background-color: #94979a;
-        }
+            .bg-2 {
+                background-color: #94979a;
+            }
 
-        .bg-3 {
-            background-color: #fbf9f8;
-        }
-    </style>
-    
- 
-    
-    
-   
-    
-    
-  
-    
-    <button-group>
-        <button id="plus">+</button>
-        <button id="minus">-</button>
-        <button id="multiply">*</button>
-        <button id="divide">/</button>
-        <button id="bracket-left">(</button>
-        <button id="bracket-right">)</button>
-    </button-group>
-    
-     <label id ="p1">Deine Rechnung: </label>
-    
-    <input type="text" id="answer" name="answer" onchange="checkUserInput()"><br><br>
-    <br>
-    <button id="submit">Schicken</button> 
-    <br>
-    <p1 id="message">Klick auf den Button um deine Antwort abzusenden.</p1>
-    <br>
-    <a href="Quiz3.html">Nächstes Spiel</a>        
-</div>
-        <div class="container-fluid bg-2 text-center"><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div> 
-    
-        <div class="container-fluid bg-3 text-center"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
+            .bg-3 {
+                background-color: #fbf9f8;
+            }
+        </style>
         
+        <button-group>
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+            <button id="multiply">*</button>
+            <button id="divide">/</button>
+            <button id="bracket-left">(</button>
+            <button id="bracket-right">)</button>
+        </button-group>
         
+        <br>
+        <br>
+        <label id ="p1">Deine Rechnung: </label>
         
-        
+        <input type="text" id="answer" name="answer" onchange="checkUserInput()"><br><br>
+        <br>
+        <button id="submit">Schicken</button> 
+        <br>
+        <p id="message">Klick auf den Button um deine Antwort abzusenden.</p>
+        <br>
+        <a href="Ende.html">Ende</a>        
+    </div>
 
-    
+    <div class="container-fluid bg-2 text-center">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div> 
+
+    <div class="container-fluid bg-3 text-center">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+        
+    <script src="../math.js"></script>
+    <script src="../script2.js"></script> 
 </body>
 </html> </center>
