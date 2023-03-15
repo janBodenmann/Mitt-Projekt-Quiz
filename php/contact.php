@@ -12,13 +12,14 @@
 
 <body>
   <center>
-    <h2 data-text_contact="Contact Us"> Contact </h2>
+    <h2 data-text_contact="Contact Us" > Contact Us! </h2>
   </center>
   
  
   <?php
 $beschreibung = $_POST["beschreibung"];
 $problem = $_POST["problem"];
+
 
 
 
@@ -51,13 +52,13 @@ if($beschreibung == "" or $problem == "") {
       <div class="form">
         <p id = "contact"> -->
         <center>   <p> Beschreibung: </p>
-          <form action="contact.php" method="post">
-    <input type ="text" name="beschreibung" size="100" maxlength="100000" accept="text/*" style="height:45px"/>  
-    <p> Problem: </p>
-        <input type="text"  name="problem"size="150" maxlength="10000000" accept="text/*" style="height:450px" />  
+          <form class="box"action="contact.php" method="post">
+          <textarea class="box"name="beschreibung" id="cnt" cols="30" rows="3"></textarea>  
+          <p> Problem: </p>
+          <textarea class="box" name="problem" id="cnt" cols="100" rows="23"></textarea>  
+      
 
-
-    <input type ="submit" value = "Send!" /> </center>
+    <input id="submit" type ="submit" value = "Send!" /> </center>
       </form>
     <!-- </p>
       </div>

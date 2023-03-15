@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account erstellen</title>
     <link rel="stylesheet" href="../css/style.css">
-</head>
+   
+
+  </head>
 <center>
 <body>
  <?php
