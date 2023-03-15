@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 08. Mrz 2023 um 15:37
+-- Erstellungszeit: 15. Mrz 2023 um 15:28
 -- Server-Version: 10.4.24-MariaDB
 -- PHP-Version: 8.1.6
 
@@ -22,6 +22,17 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `contact` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `contact`;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `ticketbeschreibung`
+--
+
+CREATE TABLE `ticketbeschreibung` (
+  `Beschreibung` varchar(255) NOT NULL,
+  `Problem` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
