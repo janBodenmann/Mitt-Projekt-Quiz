@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
   
-  <link rel="stylesheet" href="../css/style_contact.css">
+  <link rel="stylesheet" href="../css/style_contact2.css">
 </head>
 
 <body>
@@ -16,64 +16,53 @@
   </center>
   
  
- 
   <?php
+$beschreibung = $_POST["beschreibung"];
+$problem = $_POST["problem"];
 
-if (isset($_POST["submit"])){
-mail ("jan.bodenmann@lernende.bfo-vs.ch", "Kontaktformular", 'Name: '.$_POST["name"].'Email: '.$_POST["email"])
 
-?>
-<?php
+
+
+
+if($beschreibung == "" or $problem == "") {
+  echo "Bitte füll die Felder aus!";
+
+}else {
+
+  require("config2.php");
+  $stmt = $mysql->prepare("INSERT INTO ticketbeschreibung 
+  (Beschreibung, Problem) VALUES(:beschreibung, :problem)");
+    $stmt->bindParam(":beschreibung", $_POST["beschreibung"]);
+    $stmt->bindParam(":problem", $_POST["problem"]);
+    
+    
+    
+  
+
+
 }
+
 ?>
+
  
   
-  <div class="shade">
+  <!-- <div class="shade">
     <div class="blackboard">
       <div class="form">
-        <p id = "contact">
-          
-        <form action="contact.php" method="post">
-      <input type="text" name="name" placeholder="Beschreibung:" required><br>
-      <br>
-      Namen eingeben: <input type="text" name="einName" size="30" maxlength="40">     
-      <textarea name="message" rows="8" cols="80" required></textarea><br>
-      <button type="submit" name="submit">Absenden</button>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <p id = "contact"> -->
+        <center>   <p> Beschreibung: </p>
+          <form action="contact.php" method="post">
+    <input type ="text" name="beschreibung" size="100" maxlength="100000" accept="text/*" style="height:45px"/>  
+    <p> Problem: </p>
+        <input type="text"  name="problem"size="150" maxlength="10000000" accept="text/*" style="height:450px" />  
+
+
+    <input type ="submit" value = "Send!" /> </center>
       </form>
-    </p>
+    <!-- </p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   
   
@@ -94,13 +83,6 @@ mail ("jan.bodenmann@lernende.bfo-vs.ch", "Kontaktformular", 'Name: '.$_POST["na
 
   </head>
   
-    <?php
-    if(isset($_POST["submit"])){
-      mail("tutorialworktv@gmail.com", "Kontaktformular", 'Name: '.$_POST["name"].' Email: '.$_POST["email"].' Priorität: '.$_POST["priorität"].' Nachricht: '.$_POST["message"]);
-      ?>
-      <h1 style="color: green;">Das Kontaktformular wurde abgesendet!</h1>
-      <?php
-    }
-     ?>
+  
    
 
