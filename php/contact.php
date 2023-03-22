@@ -17,13 +17,13 @@
   
  
   <?php
+
+
+
+
+
 $beschreibung = $_POST["beschreibung"];
 $problem = $_POST["problem"];
-
-
-
-
-
 
 if($beschreibung == "" or $problem == "") {
   echo "Bitte füll die Felder aus!";
@@ -35,10 +35,10 @@ if($beschreibung == "" or $problem == "") {
   (Beschreibung, Problem) VALUES(:beschreibung, :problem)");
     $stmt->bindParam(":beschreibung", $_POST["beschreibung"]);
     $stmt->bindParam(":problem", $_POST["problem"]);
+    $stmt->execute();
     
     
-    
-  
+
 
 
 }
