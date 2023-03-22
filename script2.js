@@ -91,22 +91,18 @@ function checkUserInput() {
 
         if(answer == goalNum){
             points += 30
-            // localStorage.setItem('Round3', points)
             difference = "Du hast die Zahl getroffen!"
         }
         else if(x == 1 || y == 1) {
             points += 20
-            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 1."
         }
         else if(2 <= x && x <= 5 || 2 <= y && y <= 5 ) {
             points += 10
-            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 5."
         }
         else if(6 <= x && x <= 10 || 6 <= y && y <= 10 ) {
             points += 5
-            // localStorage.setItem('Round3', points)
             difference = "Du hast eine Differenz von 10."
         }
         else {

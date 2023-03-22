@@ -47,7 +47,7 @@ submitBtn.addEventListener('click', () => {
         .then(x => {
             gefunden = x.search(answer)
             if (gefunden > -1){
-                points = points + answer.length
+                points = points + 2 * answer.length
 
                 
                 if(localStorage.getItem('roundOne')){
