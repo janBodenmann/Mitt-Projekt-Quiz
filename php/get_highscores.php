@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 // establish a connection to your MySQL database
 $servername = "10.5.43.26";
 $username = "root";
@@ -14,8 +12,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// retrieve the top 10 highscores from the 'users' table
-$sql = "SELECT username, score FROM users ORDER BY score DESC LIMIT 10";
+// retrieve the top 10 highscores from the 'accounts' table
+$sql = "SELECT username, score FROM accounts ORDER BY score DESC LIMIT 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
