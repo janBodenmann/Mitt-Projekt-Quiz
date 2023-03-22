@@ -30,12 +30,12 @@
           $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
           $stmt->bindParam(":pw", $hash);
           $stmt->execute();
-          echo "Dein Account wurde angelegt!";
+          echo " <h10 style='color:red';> Dein Account wurde angelegt! </h10>";
         } else {
-          echo "Die Passwörter stimmen nicht überein!";
+          echo " <h10 style='color:red';>Die Passwörter stimmen nicht überein! </h10>";
         }
       } else {
-        echo "Der Username ist bereits vergeben!";
+        echo " <h10 style ='color: red';>Der Username ist bereits vergeben! </h10>";
       }
     }
      ?>

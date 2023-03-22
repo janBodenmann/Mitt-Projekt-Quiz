@@ -1,0 +1,30 @@
+h3{
+color: white;
+font-size: 350%;
+margin-left: 10%;
+
+}
+
+body {
+    background: url(../Images/moon.jpg);
+}
+
+p {
+    color:whitesmoke;
+    margin-left: 10%;
+    font-size: 150%;
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #8a2BE2;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(212, 80, 245, 0.8);
+}

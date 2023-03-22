@@ -47,10 +47,8 @@ if(!isset($_SESSION["username"])){
 
             <li> <a href="quiz1.html">Quiz 1 </a></li>
             <li> <a href="Quiz2.html">Quiz 2 </a></li>
-            <li> <a href="Quiz3.html">Quiz 3 </a></li>
-            <li> <a href="Quiz4.html">Quiz 4 </a></li>
-            <li> <a href="Quiz5.html">Quiz 5 </a></li>
-
+            
+           
 
 
 
