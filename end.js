@@ -51,7 +51,7 @@ fetch('submit_highscore.php', {
 
 
 // send a request to the PHP script to retrieve the highscores
-fetch('php/get_highscores.php')
+fetch('get_highscores.php')
 .then(response => response.json())
 .then(data => {
   // iterate over the highscores and display them on the webpage
