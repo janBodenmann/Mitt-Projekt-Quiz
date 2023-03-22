@@ -253,7 +253,7 @@ footer {
 }
 
 p {
-    font-size: 100%;
+    font-size: 200%;
 }
 
 
@@ -337,6 +337,9 @@ p {
 
 #headermain {
     background: #9fa3bd; 
+}
+h5 {
+   font-size: 100%; 
 }
 
 

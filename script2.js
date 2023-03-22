@@ -118,7 +118,7 @@ function checkUserInput() {
 
         if(answer){
             message.innerHTML = `
-            <p>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${points} Punkte erhalten.</p>
+            <h5>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${points} Punkte erhalten.</h5>
             <button onclick="location.reload()">Runde 2</button>
             `
         }
@@ -127,7 +127,7 @@ function checkUserInput() {
    }
    else if(counter != 0) {
     message.innerHTML = `
-    <p>Du hast nicht alle Zahlen verwendet. Versuche es wieder.</p>
+    <h5>Du hast nicht alle Zahlen verwendet. Versuche es wieder.</h5>
     `
     }
  
