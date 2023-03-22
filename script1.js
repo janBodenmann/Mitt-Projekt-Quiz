@@ -1,6 +1,6 @@
 // Eine Funktion, die einen zufälligen Buchstaben aus dem Alphabet gibt
 function generateRandomLetter() {
-    const alphabet = "AABCDEEFGHIIJKLMNOOPQRSTUUVWXYZÄÖÜ" //Ich hab die Vokalen zwei Mal eingegeben, damit sie mehr vorkommen
+    const alphabet = "EEEEEEEEEENNNNNNIIIISSSSRRRRAAAATTTTDDHHUULLCCGGMMOOBBWWFKZPVJYXQ" // https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit
     return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
