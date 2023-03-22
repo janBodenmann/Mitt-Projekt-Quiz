@@ -40,7 +40,7 @@
     }
      ?>
 
-<p id ="error"> Account erstellen <p>
+<p id ="errorr"> Account erstellen <p>
     <form method="post" class ="form">  
         <input  class ="box" type="text" name="username" placeholder="Username" required ><br>
         <input class ="box" type="password" name="pw" placeholder="Passwort" required><br>

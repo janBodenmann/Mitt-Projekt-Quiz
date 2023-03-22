@@ -269,12 +269,18 @@ p {
 
 #error {
 
-    font-size: 250%;
-    color: aliceblue;
-
+    font-size: 100%;
+    color: red;
+    margin-left: 840;
 
 }
 
+
+
+#errorr {
+    font-size: 150%;
+    color:aliceblue
+}
 /* LOGIN */
 
 
