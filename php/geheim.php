@@ -45,8 +45,8 @@ if(!isset($_SESSION["username"])){
         <ul class="nav__links">
 
 
-            <li> <a href="quiz1.html">Quiz 1 </a></li>
-            <li> <a href="Quiz2.html">Quiz 2 </a></li>
+            <li> <a href="quiz1.html"> <button> Quiz 1 </button></a></li>
+            <li> <a href="Quiz2.html"> <button> Quiz 2 </button> </a></li>
             
            
 
