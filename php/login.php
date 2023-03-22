@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST["submit"])){
-  $text = "<p id=\"error\">Der Login ist fehlgeschlagen!</p>";
+  $text = "<p id=\"error\";>Der Login ist fehlgeschlagen!</p>";
   $unsuccessful = false;
   require("config.php");
   $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME =:user");; //Username überprüfen
@@ -23,7 +23,7 @@ if(isset($_POST["submit"])){
     $unsuccessful = true;
     
   }
-  
+  if($unsuccessful) echo $text; 
 }
 
 
@@ -41,7 +41,7 @@ if(isset($_POST["submit"])){
 
 <body>
 <center>
-<p id = "error"> anmelden</p>
+<p id = "errorr"> anmelden</p>
     <form action="login.php" method="post" data-ajax="false" class="form">
       <input class = "box" type="text" name="username" placeholder="Username" required><br>
       <input class = "box" type="password" name="pw" placeholder="Passwort" required> <br>

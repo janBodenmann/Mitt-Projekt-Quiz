@@ -22,26 +22,26 @@
 
 
 
-$beschreibung = $_POST["beschreibung"];
-$problem = $_POST["problem"];
-
-if($beschreibung == "" or $problem == "") {
-  echo "Bitte füll die Felder aus!";
-
-}else {
-
-  require("config2.php");
-  $stmt = $mysql->prepare("INSERT INTO ticketbeschreibung 
-  (Beschreibung, Problem) VALUES(:beschreibung, :problem)");
-    $stmt->bindParam(":beschreibung", $_POST["beschreibung"]);
-    $stmt->bindParam(":problem", $_POST["problem"]);
-    $stmt->execute();
-    
-    
-
-
-
+if(isset($_POST["problem"]) && isset($_POST["beschreibung"]))  {
+  
+  
+  $beschreibung = $_POST["beschreibung"];
+  $problem = $_POST["problem"];
+  
+  if($beschreibung == "" or $problem == "") {
+    echo "Bitte füll die Felder aus!";
+  
+  }else {
+    require("config2.php");
+    $stmt = $mysql->prepare("INSERT INTO ticketbeschreibung 
+    (Beschreibung, Problem) VALUES(:beschreibung, :problem)");
+      $stmt->bindParam(":beschreibung", $_POST["beschreibung"]);
+      $stmt->bindParam(":problem", $_POST["problem"]);
+      $stmt->execute();  
+  }
 }
+  
+
 
 ?>
 
