@@ -1,7 +1,7 @@
 <?php
 
 // establish a connection to your MySQL database
-$servername = "10.5.43.26";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "quiz";
