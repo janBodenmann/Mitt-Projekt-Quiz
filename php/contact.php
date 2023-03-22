@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact</title>
-  
+  <link rel="stylesheet" href="style3.css">
   <link rel="stylesheet" href="../css/style_contact2.css">
 </head>
-
+<button> <a href="http://localhost/quiz/php/geheim.php">Home</a> </button>
 <body>
   <center>
     <h2 data-text_contact="Contact Us" > Contact Us! </h2>
