@@ -11,8 +11,8 @@
 
 body {
 
-
-    background: #252839;
+    background: url(../Images/moon.jpg);
+    /* background: #9fa3bd; */
 }
 
 
@@ -76,13 +76,11 @@ h3::before {
 
 @keyframes animate {
 
-    0%
-    
-     {
+    0% {
         width: 0;
     }
-    100%
-     {
+
+    100% {
         width: 100%;
     }
 }
@@ -130,7 +128,7 @@ a {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #Fbf9f8;
+    color: #000000;
     text-decoration: none;
 
 
@@ -139,8 +137,8 @@ a {
 
 
 header {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     padding: 30px 10%;
 
 }
@@ -177,9 +175,9 @@ header {
 }
 
 button {
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: #261D3A;
+    margin-left: 100px;
+    padding: 9px 40px;
+    background-color: #8a2BE2;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -238,22 +236,116 @@ head {
 img {
     width: 30%;
     height: 10%
-
-
-
-
 }
 
 footer {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     padding: 0px 20px;
-    
+
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 21px;
     color: #080808;
     text-decoration: none;
-    
-    
+
+
 }
+
+p {
+    font-size: 200%;
+}
+
+
+#p1 {
+    font-size: 200%;
+}
+
+#message {
+    font-size: 200%;
+}
+
+
+
+#error {
+
+    font-size: 100%;
+    color: red;
+    margin-left: 840;
+
+}
+
+
+
+#errorr {
+    font-size: 150%;
+    color:aliceblue
+}
+/* LOGIN */
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+    color: white;
+
+
+
+
+}
+
+
+
+
+/* LOGIN BOX */
+
+.box {
+    padding: 12px;
+    margin: 20px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+
+
+}
+#submit {
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 50%;
+    background-color:  rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5); 
+    color: white;
+    border: none 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+
+
+
+}
+
+#contact {
+    font-size: small;
+}
+
+#headermain {
+    background: #9fa3bd; 
+}
+h5 {
+   font-size: 100%; 
+}
+
+

@@ -1,9 +1,6 @@
-// Zweite Runde?
-
-
 // Eine Funktion, die einen zufälligen Buchstaben aus dem Alphabet gibt
 function generateRandomLetter() {
-    const alphabet = "AABCDEEFGHIIJKLMNOOPQRSTUUVWXYZÄÖÜ" //Ich hab die Vokalen zwei Mal eingegeben, damit sie mehr vorkommen
+    const alphabet = "EEEEEEEEEENNNNNNIIIISSSSRRRRAAAATTTTDDHHUULLCCGGMMOOBBWWFKZPVJYXQ" // https://de.wikipedia.org/wiki/Buchstabenh%C3%A4ufigkeit
     return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
@@ -50,15 +47,24 @@ submitBtn.addEventListener('click', () => {
         .then(x => {
             gefunden = x.search(answer)
             if (gefunden > -1){
-                points = points + answer.length
-                 message.innerHTML = `
-                <h3>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</h3>
-                <button onclick="location.reload()">Runde 2</button>
-                ` //Wir könnten eine zweite Runde einbauen. Also pro Spiel würde es 2 Runden geben. Die Punktzahl muss noch gespeichert werden
+                points = points + 2 * answer.length
+
+                
+                if(localStorage.getItem('roundOne')){
+                    localStorage.setItem('roundTwo', points)
+                }
+                else {
+                    localStorage.setItem('roundOne', points)
+                }
+
+                message.innerHTML = `
+                <p>Du hast ein Wort gefunden! Jetzt hast du ${points} Punkte.</p>
+                <button onclick="location.reload()">Runde 2</button>`
             }
             else {
                 message.innerHTML = `
-                <h3>Du hast Wort existiert nicht. Du erhälst keine Punkte.</h3>`
+                <p>Das Wort existiert nicht. Du erhälst keine Punkte.</p>
+                <button onclick="location.reload()">Runde 2</button>`
             }
         }
             

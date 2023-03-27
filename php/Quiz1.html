@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erstes Spiel</title>
-    <script src="../script1.js"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <style>
@@ -22,17 +21,15 @@
         background-color: #fbf9f8;
     }
 </style>
-
+ <a href="http://localhost/quiz/php/geheim.php"> <button>Home </button></a> 
 <body>
     <div class="container-fluid bg-1 text-center">
         <h7>
             <br><br><br><br><br><br>
 
-
-
-          <center>  <p>Versuche aus den untenstehenden Buchstaben das längste Wort zu machen</p>
-            <h2 id="letters"></h2>
-            <label for="fname">Dein Wort </label>
+            <center>  <p id = "p1">Versuche aus den untenstehenden Buchstaben das längste Wort zu machen</p>
+            <p id="letters"></p>
+            <label for="fname" id = "p1">Dein Wort: </label>
             <input type="text" id="answer" name="answer"><br><br>
             <button id="submit">Schicken</button>
             <p id="message">Klick auf den Button um deine Antwort abzusenden.</p>
@@ -41,15 +38,17 @@
         
     </div> </center>
 
-    <script src="script1.js"></script>
 
     <div class="container-fluid bg-2 text-center">
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
     <div class="container-fluid bg-3 text-center">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br>
     </div>
+
+    
+    <script src="../script1.js"></script>
 </body>
 
 </html>

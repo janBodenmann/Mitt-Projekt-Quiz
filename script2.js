@@ -1,5 +1,6 @@
-// Funktion checkUserInput() noch nicht fertig.
-
+// to check if goalnumber is possible:
+// take random number from array then random (plus, minus or multiply) another random number from array. repeat 3 or so times
+// and you get the goal number
 
 // Eine Funktion, die eine zufälligen Nummer gibt
 function generateRandomNumber() {
@@ -13,8 +14,14 @@ function generateRandomNumber2() {
     return numbers[Math.floor(Math.random() * numbers.length)]
 }
 
-// Eine Funktion, die eine grosse Zahl gibt
+// Eine Funktion, die die Zahl 10, 15 oder 20 ausgibt
 function generateRandomBigNumber() {
+    const numbers = ['10', '15', '20']
+    return numbers[Math.floor(Math.random() * numbers.length)]
+}
+
+// Eine Funktion, die eine grosse Zahl gibt
+function generateRandomBigNumber2() {
     const numbers = ['25', '50', '75', '100']
     return numbers[Math.floor(Math.random() * numbers.length)]
 }
@@ -35,26 +42,27 @@ const randomNumbers = [
 // Ein Array mit 2 grossen Nummern 
 const bigNumbers = [
     { number: generateRandomBigNumber(), },
-    { number: generateRandomBigNumber(), },
+    { number: generateRandomBigNumber2(), },
 ];
 
 // Ein Array mit allen Zahlen
 const allNumbers = randomNumbers.concat(bigNumbers)
-console.log(allNumbers)
 
 // Variablen und Auslösung von der Funktion
-const goal = document.getElementById('goalnumber')
+const goalNum = document.getElementById('goalnumber')
 const numbers1 = document.getElementById('numbers1')
 const numbers2 = document.getElementById('numbers2')
 const submitBtn = document.getElementById('submit')
 const message = document.getElementById('message')
 
+let points = 0
 
 loadNumbers()
+checkUserInput()
 
 // Funktion um die Variablen zu laden
 function loadNumbers() {
-    goalNumber.forEach(item => goal.textContent  += item.number)
+    goalNumber.forEach(item => goalNum.textContent  += item.number)
     randomNumbers.forEach(item => numbers1.textContent += item.number + " ") 
     bigNumbers.forEach(item => numbers2.textContent += item.number + " ")
 }
@@ -62,23 +70,71 @@ function loadNumbers() {
 // Funktion um zu checken, ob die Nummer, der der User eingibt, gegeben ist.
 function checkUserInput() {
     const input = document.getElementById('answer').value
-    // console.log(input)
-    // console.log(bigNumbers.includes(input))
-    
-    let check = allNumbers.find(o => o.number === input);
-    
+    let counter = 0
+    let difference = ""
 
-    if (check != undefined){
-        console.log("true");
+
+    allNumbers.forEach(requieredNumber => {
+        if(input.includes(requieredNumber.number)){
+            counter++
+        }
+    });
+
+   if(counter >= 6){
+    answer = math.evaluate(input)
+    
+    goalNumber.forEach(number => {
+        let goalNum = parseInt(number.number)
+
+        let x = goalNum - answer
+        let y = answer - goalNum
+
+        if(answer == goalNum){
+            points += 30
+            difference = "Du hast die Zahl getroffen!"
+        }
+        else if(x == 1 || y == 1) {
+            points += 20
+            difference = "Du hast eine Differenz von 1."
+        }
+        else if(2 <= x && x <= 5 || 2 <= y && y <= 5 ) {
+            points += 10
+            difference = "Du hast eine Differenz von 5."
+        }
+        else if(6 <= x && x <= 10 || 6 <= y && y <= 10 ) {
+            points += 5
+            difference = "Du hast eine Differenz von 10."
+        }
+        else {
+            difference = "Die Differenz ist grösser als 10."
+        }
+
+        if(localStorage.getItem('roundThree')){
+            localStorage.setItem('roundFour', points)
+        }
+        else {
+            localStorage.setItem('roundThree', points)
+        }
+
+        if(answer){
+            message.innerHTML = `
+            <h5>Du hast die Zahl ${answer} erhalten! ${difference} Dafür hast du ${points} Punkte erhalten.</h5>
+            <button onclick="location.reload()">Runde 2</button>
+            `
+        }
+    })
+
+   }
+   else if(counter != 0) {
+    message.innerHTML = `
+    <h5>Du hast nicht alle Zahlen verwendet. Versuche es wieder.</h5>
+    `
     }
-    else {
-        console.log("false")
-    }
+ 
 }
 
 
-// let obj = bigNumbers.find(o => o.number === '100');
-// console.log(obj);
+
 
 
 

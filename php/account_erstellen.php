@@ -1,53 +1,55 @@
 
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account erstellen</title>
+    <link rel="stylesheet" href="../css/style.css">
+   
+
+  </head>
+<center>
+<body>
  <?php
- if(isset($_POST["submit"])){
-    require("doc.php");
-    
+ 
     if(isset($_POST["submit"])){
-        var_dump($_POST);
-    
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    
-    $stmt =$con->prepare("SELECT * FROM users WHERE username = :username OR email=:email");
-    $stmt->bindParam(":username", $username);
-    $stmt->bindParam(":email", $email);
-    $stmt->execute();
-
-    $userAlreadyExists = $stmt-> fetchColumn();
-
-    if(!$userAlreadyExists){
-        registerUser($username, $email, $password);
-    }
-        else {
-
+      require("config.php");
+      $stmt = $mysql->prepare("SELECT * FROM accounts WHERE USERNAME = :user"); //Username überprüfen
+      $stmt->bindParam(":user", $_POST["username"]);
+      $stmt->execute();
+      $count = $stmt->rowCount();
+      if($count == 0){
+        //Username ist frei
+        if($_POST["pw"] == $_POST["pw2"]){
+          //User anlegen
+          $stmt = $mysql->prepare("INSERT INTO accounts (USERNAME, PASSWORD) VALUES (:user, :pw)");
+          $stmt->bindParam(":user", $_POST["username"]);
+          $hash = password_hash($_POST["pw"], PASSWORD_BCRYPT);
+          $stmt->bindParam(":pw", $hash);
+          $stmt->execute();
+          echo " <h10 style='color:red';> Dein Account wurde angelegt! </h10>";
+        } else {
+          echo " <h10 style='color:red';>Die Passwörter stimmen nicht überein! </h10>";
         }
-
-function registerUser($username,$email,$password){
-    global $con;
-    $stmt = $con->prepare("INSERT INTO users(username, email, password) VALUES (:username, :email, :password)");
-    $stmt->bindParam(":username", $username);
-    $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":password", $password);
-    $stmt->execute();
-
-}
-
-
-
+      } else {
+        echo " <h10 style ='color: red';>Der Username ist bereits vergeben! </h10>";
+      }
     }
-  
-}
+     ?>
 
+<p id ="errorr"> Account erstellen <p>
+    <form method="post" class ="form">  
+        <input  class ="box" type="text" name="username" placeholder="Username" required ><br>
+        <input class ="box" type="password" name="pw" placeholder="Passwort" required><br>
+        <input  class ="box"type="password" name="pw2" placeholder="Passwort wiederholen" required><br>
+        <button class ="box"  type="submit" name="submit"> Erstellen</button>
+    </form>
+    <br>
+    <a href="../php/login.php">Hast du bereits einen Account</a>
+   
 
-
-
-
-
-
-
- ?>
-
-
-    
+</body>
+</center>
